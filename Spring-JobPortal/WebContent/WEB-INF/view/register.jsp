@@ -7,20 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Spring Job Portal</title>
-</head>
-<body>
-	<div style="text-align: center;">
-		<div
-			style="box-sizing: border-box; display: inline-block; width: auto; max-width: 480px; background-color: #FFFFFF; border: 2px solid #0361A8; border-radius: 5px; box-shadow: 0px 0px 8px #0361A8; margin: 50px auto auto;">
-			<div
-				style="background: #0361A8; border-radius: 5px 5px 0px 0px; padding: 15px;">
-				<span
-					style="font-family: verdana, arial; color: #D4D4D4; font-size: 1.00em; font-weight: bold;">Enter
-					your login and password</span>
-			</div>
-			<div style="background:; padding: 15px">
-				<style type="text/css" scoped>
+<title>Registration | Spring Job Portal</title>
+<style type="text/css" scoped>
 td {
 	text-align: left;
 	font-family: verdana, arial;
@@ -60,19 +48,32 @@ table.center {
 	font-size: 1.00em;
 }
 </style>
-				<H3>${errors.uiErrorMessage}</H3>
-				<br>
-				<form:form method="post" action="submit" name="aform" target="_top"
-					modelAttribute="user">
+</head>
+<body>
+	<div style="text-align: center;">
+		<div
+			style="box-sizing: border-box; display: inline-block; width: auto; max-width: 480px; background-color: #FFFFFF; border: 2px solid #0361A8; border-radius: 5px; box-shadow: 0px 0px 8px #0361A8; margin: 50px auto auto;">
+			<div
+				style="background: #0361A8; border-radius: 5px 5px 0px 0px; padding: 15px;">
+				<span
+					style="font-family: verdana, arial; color: #D4D4D4; font-size: 1.00em; font-weight: bold;">Enter
+					Register Form</span>
+			</div>
+			<div style="background:; padding: 15px"></div>
+			<form:form method="post" action="registerSubmit" name="aform" target="_top"
+					modelAttribute="registration">
 					<table class='center'>
 						<tr>
-							<td>Login:</td>
-							<td><form:input type="text" name="login" path="userName"></form:input></td>
+							<td>Name:</td>
+							<td><form:input type="text" name="name" path="name"></form:input></td>
 						</tr>
 						<tr>
-							<td>Password:</td>
-							<td><form:input type="password" name="password"
-									path="password"></form:input></td>
+							<td>Email:</td>
+							<td><form:input type="text" name="email" path="email"></form:input></td>
+						</tr>
+						<tr>
+							<td>Age:</td>
+							<td><form:input type="text" name="age" path="age"></form:input></td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
@@ -80,16 +81,6 @@ table.center {
 						</tr>
 					</table>
 				</form:form>
-				<br>
-				<form:form method="post" action="registerReq" name="registerForm" target="_top">
-					<table class='center'>
-							<tr>
-								<td>Not registered yet?</td>
-								<td><input type="submit" value="Register"></td>
-							</tr>
-					</table>
-				</form:form>
-			</div>
 		</div>
 	</div>
 </body>
